@@ -15,13 +15,16 @@ const sequelize = new Sequelize(
 // auth models
 
 const user = require('../models/users');
+const services = require('../models/services');
 
 // append sequelize to model
 
 const usersModel = user(sequelize, Sequelize);
+const servicesModel = services(sequelize, Sequelize);
 
 module.exports = {
     usersModel,
+    servicesModel,
     Sequelize,
     sequelize
 }
